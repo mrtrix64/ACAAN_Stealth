@@ -98,7 +98,7 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 <body onload="doSort(), setTimeout(function() {window.scrollTo(0, 1)}, 100);">
 <div id="background_image" onClick="badger()"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
 <div spry:region="ds1" id="position">
-Number <span id="cutposition">{position}</span></div>
+Number <span id="cutposition">{position} - {card}</span></div>
 
 <div spry:region="ds1" id="card">
 Card {card}</div>
