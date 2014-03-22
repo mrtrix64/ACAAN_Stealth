@@ -9,9 +9,18 @@
 <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
 <script src="phonegap.js"></script>
 <script type="text/javascript">
-window.plugin.notification.badge.set(1);
+
+function badger() {
+	alert("hello");
+	
+	window.plugin.notification.badge.set(1);
 // or
 window.plugin.notification.badge.set('3');
+}
+
+
+
+
 
 </script>
 <style type="text/css">
@@ -75,7 +84,7 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 </head>
 
 <body onload="doSort(), setTimeout(function() {window.scrollTo(0, 1)}, 100);">
-<div id="background_image"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
+<div id="background_image" onClick="badger()"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
 <div spry:region="ds1" id="position">
 Number {position}</div>
 
