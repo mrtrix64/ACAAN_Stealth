@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns	= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		    = "underground.collective.acaan.stealth"
+	version 	= "1.0.0">
+
+	<name>ACAAN Stealth</name>
+
+	<description>
+Any Card At Any Number (ACAAN) is the holy grail of card magic.
+
+</description>
+
+	<author href="http://underground-collective.com" email="post@colinmiller.co.uk">
+		The Underground Collective
+	</author>
+	
+	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+    <false/></gap:config-file>
+
+<preference name="fullscreen" value="true" />
+	
+	<!--iOS Icons-->
+  	<icon src="icon72x72.png" gap:platform="ios" width="72" height="72" />
+ 	<icon src="icon57x57.png" gap:platform="ios" width="57" height="57" />
+	<icon src="icon114x114.png" gap:platform="ios"  width="48" height="114" />
+	
+	<!--iOS Splash screens-->
+  	<gap:splash src="launch320x480.png" />
+  	<gap:splash src="launch320x480.png" width="320" height="480" />
+	<gap:splash src="launch640x960.png" width="640" height="960" />
+	<gap:splash src="launch640x1136.png" width="640" height="1136" />
+	<gap:splash src="launch1024x768.png" width="1024" height="768" />
+	<gap:splash src="launch1024x768.png" width="768" height="1024" />
+	<gap:splash src="launch320x480.png" width="320" height="480" />
+	
+	
+	<!--Android Icons -->
+	<icon src="ldpi.png" gap:platform="android" gap:density="ldpi" width="36" height="36"/>
+	<icon src="mdpi.png" gap:platform="android" gap:density="mdpi" width="48" height="48"/>
+	<icon src="hdpi.png" gap:platform="android" gap:density="hdpi" width="72" height="72"/>
+	<icon src="xhdpi.png" gap:platform="android" gap:density="xhdpi" width="96" height="96"/>
+	
+	<!--Standard Icon -->
+	<icon src="icon.png" width="72" height="72" />
+	
+	<!-- Android Splash Screens-->
+	<gap:splash src="screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+	
+	<preference name="fullscreen" value="true" />
+	<preference name="show-splash-screen-spinner" value="true" />
+	<preference name="orientation" value="portrait" />
+	<preference name="webviewbounce" value="false" />
+	<!--<preference name="target-device" value="handset" />-->
+	<!--<preference name="auto-hide-splash-screen" value="false" />-->
+</widget>
