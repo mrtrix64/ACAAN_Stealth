@@ -13,9 +13,13 @@
 function badger() {
 	alert("hello");
 	
+	
+	var cutnumber = $('#position').html();
+alert(cutnumber); 
+	
 	window.plugin.notification.badge.set(1);
 // or
-window.plugin.notification.badge.set('3');
+	window.plugin.notification.badge.set('3');
 }
 
 
@@ -71,6 +75,7 @@ body {
 <script src="SpryAssets/xpath.js" type="text/javascript"></script>
 <script src="SpryAssets/SpryData.js" type="text/javascript"></script>
 <script type="text/javascript">
+
 var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml=1", "recordset/record", {sortOnLoad: "result_id", sortOrderOnLoad: "descending", useCache: false, loadInterval: 2000});
 </script>
 <meta content='initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
