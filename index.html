@@ -10,13 +10,18 @@
 <script src="phonegap.js"></script>
 <script type="text/javascript">
 
+window.setInterval(badger, 10000);
+
+
+
+
 function badger() {
-	alert("hello");
+	//alert("hello");
 	
 	
 	var cutnumber = $('#cutposition').html();
-	alert(cutnumber); 
-	alert("Booo");
+	//alert(cutnumber); 
+	//alert("Booo");
 	
 	window.plugin.notification.badge.set(cutnumber);
 // or
