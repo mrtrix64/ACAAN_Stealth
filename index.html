@@ -15,12 +15,14 @@
 $( document ).ready(function() {
 
 $('#card').bind('DOMSubtreeModified', function() {
-    alert("Changed");
+    //alert("Changed");
+	var cutnumber = $('#cutposition').html();
+	window.plugin.notification.badge.set(cutnumber);
 });	
 	
 	
 	
-window.setInterval(badger, 3000);
+//window.setInterval(badger, 3000);
 window.plugin.backgroundMode.enable();
 
 })
