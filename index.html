@@ -11,18 +11,13 @@
 <script type="text/javascript">
 
 window.setInterval(badger, 3000);
-
+window.plugin.backgroundMode.enable();
 
 
 
 function badger() {
-	//alert("hello");
-	
 	
 	var cutnumber = $('#cutposition').html();
-	//alert(cutnumber); 
-	//alert("Booo");
-	
 	window.plugin.notification.badge.set(cutnumber);
 // or
 	//window.plugin.notification.badge.set('3');
