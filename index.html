@@ -24,13 +24,10 @@ function onDeviceReady() {
     // Now safe to use the PhoneGap API
 	
 $('#card').bind('DOMSubtreeModified', function() {
-	var cardcut = $('#card').text();
+	/*var cardcut = $('#card').text();
 	var cutnumber = $('#cutposition').text();
-	window.plugin.notification.badge.set(cutnumber);
-	window.plugin.notification.local.add({
-    title: cardcut,
-    message: cardcut,
-});
+	window.plugin.notification.badge.set(cutnumber);*/
+	
 });
 	
 }
@@ -38,7 +35,7 @@ $('#card').bind('DOMSubtreeModified', function() {
 function badger() {
 	//alert("Badger run");
 	var cutnumber = $('#cutposition').text();
-	window.plugin.notification.badge.set(cutnumber);
+	
 	}	
 
 $(window).load(function() {
@@ -54,31 +51,33 @@ setInterval(function(){
 	dataType:'json',
 	success:function(response)
 {
-	
-	
 	var latestcall = response.position;
 	var cutnumber = $('#cutposition').text();
-	alert ("Latest call is "+latestcall);
-	alert ("Number on page is "+cutnumber);
+	//alert ("Latest call is "+latestcall);
+	//alert ("Number on page is "+cutnumber);
 	//$('#cutposition').text(response.position );
 	//$('#cutcard').text(response.card );
 	
 	if (latestcall == cutnumber)
   {
-  	alert("Latest call and page number match");
+  	//alert("Latest call and page number match");
   }
 else
   {
-	 alert("Latest call and page number DON'T match"); 	
-	 $('#cutposition').text(response.position );
+	 //alert("Latest call and page number DON'T match"); 	
+	$('#cutposition').text(response.position );
 	$('#cutcard').text(response.card );
+	window.plugin.notification.badge.set(cutnumber);
+	window.plugin.notification.local.add({
+    title: cardcut,
+    message: cardcut,
+});
   }
 }
 });
 	
 	},1000);
-	
-	window.plugin.backgroundMode.enable();
+window.plugin.backgroundMode.enable();
 
 </script>
 
