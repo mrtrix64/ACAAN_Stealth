@@ -24,8 +24,8 @@ function onDeviceReady() {
     // Now safe to use the PhoneGap API
 	
 $('#card').bind('DOMSubtreeModified', function() {
-	var cardcut = $('#card').html();
-	var cutnumber = $('#cutposition').html();
+	var cardcut = $('#card').text();
+	var cutnumber = $('#cutposition').text();
 	window.plugin.notification.badge.set(cutnumber);
 	window.plugin.notification.local.add({
     title: cardcut,
@@ -54,8 +54,8 @@ setInterval(function(){
 	dataType:'json',
 	success:function(response)
 {
-	$('#cutposition').html(response.position );
-	$('#cutcard').html(response.card );
+	$('#cutposition').text(response.position );
+	$('#cutcard').text(response.card );
 }
 });
 	},1000);
@@ -123,11 +123,11 @@ body {
 
 <body onload="{window.scrollTo(0, 1)}, 100);">
 <div id="background_image" onClick="badger();"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
-<div spry:region="ds1" id="position">
-Number <span id="cutposition"></span></div>
+<div id="position">
+Number <span id="cutposition">00</span></div>
 
-<div spry:region="ds1" id="card">
-Card <span id="cutcard"></span></div>
+<div id="card">
+Card <span id="cutcard">FF</span></div>
 
 
 </body>
