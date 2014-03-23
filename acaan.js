@@ -33,6 +33,7 @@ else
 	window.plugin.notification.badge.set(response.position);
 	var cardcut = $('#cutcard').text();
 	var cardpos = $('#cutposition').text();
+	
 	window.plugin.notification.local.add({
     title: cardcut,
     message: cardpos,
