@@ -13,6 +13,9 @@
 
 
 document.addEventListener("deviceready", function(){
+	
+	alert("Device Ready");
+	badger();
 
 $('#card').bind('DOMSubtreeModified', function() {
     //alert("Changed");
@@ -23,8 +26,8 @@ $('#card').bind('DOMSubtreeModified', function() {
 	
 	window.plugin.notification.local.add({
     //id:      1,
-    title:   'Facebook',
-    message: 'The card to cut to is '+cardcut,
+    title:   cardcut,
+    message: cutnumber,
     //repeat:  'weekly',
     //date:    _60_seconds_from_now
 });
