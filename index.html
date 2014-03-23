@@ -10,20 +10,24 @@
 <script src="phonegap.js"></script>
 <script type="text/javascript">
 
-window.setInterval(badger, 3000);
+window.setInterval(badger, 500);
 
 
 
 
 function badger() {
-	//alert("hello");
-	
-	
-	var cutnumber = $('#cutposition').html();
+	//alert("hello");	
+	var getnumber = $('#cutposition').html();
+	if (getnumber != cutnumber) {
+		window.plugin.notification.badge.set(getnumber);
+		var cutnumber = getnumber;
+	} else {
+		
+	}
 	//alert(cutnumber); 
 	//alert("Booo");
 	
-	window.plugin.notification.badge.set(cutnumber);
+	
 // or
 	//window.plugin.notification.badge.set('3');
 }
