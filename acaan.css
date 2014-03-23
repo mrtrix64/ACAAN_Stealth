@@ -1,0 +1,43 @@
+/* CSS Document */
+body,td,th {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 26px;
+	color: #333;
+}
+body {
+	background-color: #000;
+	margin: 0px;
+	padding: 0px;	
+	
+}
+#background_image {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+
+}
+.imagesize {
+	width: 100%;
+	height: auto;
+}
+#position {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	position: absolute;
+	font-style: normal;
+	top: 66px;
+	left: 19px;
+	color: #FFF;
+	text-align: right;
+}
+#card {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	position: absolute;
+	font-style: normal;
+	top: 66px;
+	left: 102px;
+	color: #FFF;
+	height: 2px;
+	text-align: center;
+}
