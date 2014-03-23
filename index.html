@@ -21,7 +21,12 @@ $( document ).ready(function() {
 var timerCount = 0;
 window.plugins.BackgroundJS.LockBackgroundTime(function(){}, function(msg){console.log(msg);});
 setInterval(function() {
-badger;
+
+var cutnumber = $('#cutposition').html();
+window.plugin.notification.badge.set(cutnumber);
+
+
+
 },3000);
 
 })
