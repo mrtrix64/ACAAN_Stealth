@@ -13,6 +13,13 @@
 
 
 $( document ).ready(function() {
+
+$('#card').bind('DOMSubtreeModified', function() {
+    alert("Changed");
+});	
+	
+	
+	
 window.setInterval(badger, 3000);
 window.plugin.backgroundMode.enable();
 
