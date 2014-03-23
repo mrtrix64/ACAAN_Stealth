@@ -11,44 +11,35 @@
 <script type="text/javascript">
 
 
+document.addEventListener("deviceready", onDeviceReady, false);
 
-document.addEventListener("deviceready", function(){
+function onDeviceReady() {
+    // Now safe to use the PhoneGap API
 	var cutnumber = 0;
 	var cardcut = 'KK';
-	//alert("Device Ready");
-	//badger();
-
+	window.plugin.backgroundMode.enable();
+	
+	
 $('#card').bind('DOMSubtreeModified', function() {
-    //alert("Changed");
 	var cardcut = $('#card').html();
 	var cutnumber = $('#cutposition').html();
 	window.plugin.notification.badge.set(cutnumber);
-	
-	
 	window.plugin.notification.local.add({
-    //id:      1,
-    title:   cardcut,
-    message: cutnumber,
-    //repeat:  'weekly',
-    //date:    _60_seconds_from_now
+    title: "Result",
+    message: cardcut+" "+cutnumber,
 });
-});	
-	
-	
-	
-//window.setInterval(badger, 3000);
-window.plugin.backgroundMode.enable();
-
-})
-
+});
 function badger() {
 	
 	var cutnumber = $('#cutposition').html();
 	window.plugin.notification.badge.set(cutnumber);
-		
-// or
-	//window.plugin.notification.badge.set('3');
+	
+}	
+	
 }
+
+
+
 
 </script>
 <style type="text/css">
@@ -113,7 +104,7 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 <link href="http://www.cardstats.co.uk/ios_icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
 </head>
 
-<body onload="doSort(), setTimeout(function() {window.scrollTo(0, 1)}, 100);">
+<body onload="doSort(), badger(); {window.scrollTo(0, 1)}, 100);">
 <div id="background_image" onClick="badger()"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
 <div spry:region="ds1" id="position">
 Number <span id="cutposition">{position}</span></div>
