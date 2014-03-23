@@ -26,9 +26,11 @@ $('#card').bind('DOMSubtreeModified', function() {
 	window.plugin.notification.badge.set(cutnumber);
 	window.plugin.notification.local.add({
     title: "Result",
-    message: cardcut+" "+cutnumber,
+    message: cardcut,
 });
 });
+
+
 function badger() {
 	
 	var cutnumber = $('#cutposition').html();
@@ -91,7 +93,7 @@ body {
 <script src="SpryAssets/SpryData.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml=1", "recordset/record", {sortOnLoad: "result_id", sortOrderOnLoad: "descending", useCache: false, loadInterval: 1000});
+var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml=1", "recordset/record", {sortOnLoad: "result_id", sortOrderOnLoad: "descending", useCache: false, loadInterval: 2000});
 
 </script>
 <meta content='initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
