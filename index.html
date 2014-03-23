@@ -10,40 +10,25 @@
 <script src="phonegap.js"></script>
 <script type="text/javascript">
 
-window.setInterval(badger, 500);
+window.setInterval(badger, 3000);
 
 
 
 
 function badger() {
-	//alert("hello");	
-	var getnumber = $('#cutposition').html();
-	if (getnumber != cutnumber) {
-		window.plugin.notification.badge.set(getnumber);
-		var cutnumber = getnumber;
-	} else {
-		
-	}
+	//alert("hello");
+	
+	
+	var cutnumber = $('#cutposition').html();
 	//alert(cutnumber); 
 	//alert("Booo");
 	
-	
+	window.plugin.notification.badge.set(cutnumber);
 // or
 	//window.plugin.notification.badge.set('3');
 }
 
 
-
-
-
-$( document ).ready(function() {
-
-$('#cutposition').bind("DOMSubtreeModified",function(){
-  alert('changed');
-});
-
-
-});
 
 
 
