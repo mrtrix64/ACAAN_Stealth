@@ -68,6 +68,8 @@ else
 	$('#cutposition').text(response.position );
 	$('#cutcard').text(response.card );
 	window.plugin.notification.badge.set(cutnumber);
+	
+	var cardcut = $('#cutcard').text();
 	window.plugin.notification.local.add({
     title: cardcut,
     message: cardcut,
