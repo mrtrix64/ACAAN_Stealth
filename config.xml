@@ -55,6 +55,7 @@ Any Card At Any Number (ACAAN) is the holy grail of card magic.
 	<preference name="orientation" value="portrait" />
 	<preference name="webviewbounce" value="false" />
 	<gap:plugin name="de.appplant.cordova.plugin.badge" />
+	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	
 	<!--<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
     <true/>
@@ -63,11 +64,6 @@ Any Card At Any Number (ACAAN) is the holy grail of card magic.
 <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
 
 
-<gap:config-file platform="ios" parent="UIBackgroundModes" overwrite="true">
-    <array>
-        <string>fetch</string>
-    </array>
-</gap:config-file>
 
 
 	<!--<preference name="target-device" value="handset" />-->
