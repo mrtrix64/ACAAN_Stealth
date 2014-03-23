@@ -67,13 +67,15 @@ setInterval(function(){
 	
 
 	
-	if (targetnumber === 52)
+	if (latestcall == cutnumber)
   {
-  	
+  	alert("Latest call and page number match");
   }
 else
   {
-	  	
+	 alert("Latest call and page number DON'T match"); 	
+	 $('#cutposition').text(response.position );
+	$('#cutcard').text(response.card );
   }
 	
 	
