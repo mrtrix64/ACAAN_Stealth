@@ -26,7 +26,7 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
     //
     function onDeviceReady() {
         // Now safe to use device APIs
-		setInterval(function(){
+	setInterval(function(){
 	jQuery.ajax({
 	url: "http://www.cardstats.co.uk/push_data_json.php",
 	dataType:'json',
@@ -46,12 +46,11 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 else
   {
 	 //alert("Latest call and page number DON'T match"); 	
-	$('#cutposition').text(response.position );
+	$('#cutposition').text(response.position);
 	$('#cutcard').text(response.card );
-	window.plugin.notification.badge.set(cutnumber);
-	
-	var cardcut = $('#cutcard').text();
-	var cardpos = $('#cutposition').text();
+	window.plugin.notification.badge.set(response.position);
+	var cardcut = response.card;
+	var cardpos = response.position;
 	window.plugin.notification.local.add({
     title: cardcut,
     message: cardpos,
