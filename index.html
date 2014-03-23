@@ -57,7 +57,9 @@ setInterval(function(){
 	
 	
 	var latestcall = response.position;
-	alert (latestcall);
+	var cutnumber = $('#cutposition').text();
+	alert ("Latest call is "+latestcall);
+	alert ("Number on page is "+cutnumber);
 	//$('#cutposition').text(response.position );
 	//$('#cutcard').text(response.card );
 }
