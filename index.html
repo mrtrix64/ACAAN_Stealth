@@ -10,24 +10,17 @@
 <script src="phonegap.js"></script>
 <script type="text/javascript">
 
+$( document ).ready(function() {
 window.setInterval(badger, 3000);
 window.plugin.backgroundMode.enable();
-
-
+})
 
 function badger() {
-	
 	var cutnumber = $('#cutposition').html();
 	window.plugin.notification.badge.set(cutnumber);
 // or
 	//window.plugin.notification.badge.set('3');
 }
-
-
-
-
-
-
 
 </script>
 <style type="text/css">
