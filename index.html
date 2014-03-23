@@ -54,10 +54,34 @@ setInterval(function(){
 	dataType:'json',
 	success:function(response)
 {
-	$('#cutposition').text(response.position );
-	$('#cutcard').text(response.card );
+	
+	
+	var latestcall = response.position;
+	alert (latestcall);
+	//$('#cutposition').text(response.position );
+	//$('#cutcard').text(response.card );
 }
 });
+	
+
+	
+	if (targetnumber === 52)
+  {
+  	
+  }
+else
+  {
+	  	
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	},1000);
 	
 	window.plugin.backgroundMode.enable();
