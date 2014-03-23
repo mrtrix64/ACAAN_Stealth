@@ -25,14 +25,14 @@ $('#card').bind('DOMSubtreeModified', function() {
 	var cutnumber = $('#cutposition').html();
 	window.plugin.notification.badge.set(cutnumber);
 	window.plugin.notification.local.add({
-    title: "Result",
+    title: cardcut,
     message: cardcut,
 });
 });
 
 
 function badger() {
-	
+	alert("Badger run");
 	var cutnumber = $('#cutposition').html();
 	window.plugin.notification.badge.set(cutnumber);
 	
