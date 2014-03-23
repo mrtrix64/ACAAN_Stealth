@@ -22,10 +22,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     // Now safe to use the PhoneGap API
-	var cutnumber = 0;
-	var cardcut = 'KK';
-	window.plugin.backgroundMode.enable();
-
 	
 $('#card').bind('DOMSubtreeModified', function() {
 	var cardcut = $('#card').html();
@@ -41,7 +37,7 @@ $('#card').bind('DOMSubtreeModified', function() {
 
 function badger() {
 	//alert("Badger run");
-	var cutnumber = $('#cutposition').html();
+	var cutnumber = $('#cutposition').text();
 	window.plugin.notification.badge.set(cutnumber);
 	}	
 
@@ -63,6 +59,8 @@ setInterval(function(){
 }
 });
 	},1000);
+	
+	window.plugin.backgroundMode.enable();
 
 </script>
 
