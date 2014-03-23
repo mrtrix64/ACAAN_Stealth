@@ -14,20 +14,8 @@
 
 $( document ).ready(function() {
 
-//window.setInterval(badger, 3000);
-//window.plugin.backgroundMode.enable();
-
-
-var timerCount = 0;
-window.plugins.BackgroundJS.LockBackgroundTime(function(){}, function(msg){console.log(msg);});
-setInterval(function() {
-
-var cutnumber = $('#cutposition').html();
-window.plugin.notification.badge.set(cutnumber);
-
-
-
-},3000);
+window.setInterval(badger, 3000);
+window.plugin.backgroundMode.enable();
 
 })
 
@@ -95,7 +83,7 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 </script>
 <meta content='initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">-->
 
 <link href="http://www.cardstats.co.uk/ios_icons/apple-touch-icon.png" rel="apple-touch-icon" />
 <link href="http://www.cardstats.co.uk/ios_icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
