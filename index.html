@@ -14,8 +14,15 @@
 
 $( document ).ready(function() {
 
-window.setInterval(badger, 3000);
-window.plugin.backgroundMode.enable();
+//window.setInterval(badger, 3000);
+//window.plugin.backgroundMode.enable();
+
+
+var timerCount = 0;
+window.plugins.BackgroundJS.LockBackgroundTime(function(){}, function(msg){console.log(msg);});
+setInterval(function() {
+badger;
+},3000);
 
 })
 
