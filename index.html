@@ -20,19 +20,7 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-/*setTimeout(function(){
-	
-jQuery.ajax({
-url: "http://www.cardstats.co.uk/push_data_json.php",
-dataType:'json',
-success:function(response)
-{
-$('#cutposition').html(response.position );
-$('#cutcard').html(response.card );
-}
-});
-	
-	},1000);*/
+
 
 
 
@@ -44,28 +32,25 @@ function onDeviceReady() {
 	var cardcut = 'KK';
 	window.plugin.backgroundMode.enable();
 	
-var getdata = function() {
-    $.ajax({
-      url: 'http://www.cardstats.co.uk/push_data_json.php',
-      dataType: 'json',
-      cache: true,
-      timeout: 30000,
-      success: function(data) {
-
-            // $('#output ul').append('<li>The feed loads fine');
-            $('#cutposition').html(response.position );
-			$('#cutcard').html(response.card );
-
-        },
-        error: function(){
-            $('#cutposition').append('Error');
-			$('#cutcard').append('Error');
-        }
-    });
-    setTimeout(getdata, 1000);
+	
+	
+	
+	
+	
+setTimeout(function(){
+	
+jQuery.ajax({
+url: "http://www.cardstats.co.uk/push_data_json.php",
+dataType:'json',
+success:function(response)
+{
+$('#cutposition').html(response.position );
+$('#cutcard').html(response.card );
+alert("Oi");
 }
-
-getdata();	
+});
+	
+	},8000);
 	
 	
 	
@@ -100,6 +85,27 @@ $(window).load(function() {
 	//alert("It's loaded!") 
 	badger();
 });
+
+
+setInterval(function(){
+	alert("Oi Oi");
+	jQuery.ajax({
+	url: "http://www.cardstats.co.uk/push_data_json.php",
+	dataType:'json',
+	success:function(response)
+{
+	$('#cutposition').html(response.position );
+	$('#cutcard').html(response.card );
+	
+
+}
+});
+	
+	},1000);
+
+
+	
+
 
 </script>
 <style type="text/css">
