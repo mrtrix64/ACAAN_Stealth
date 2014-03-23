@@ -20,6 +20,8 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
+setTimeout(function(){
+	
 jQuery.ajax({
 url: "http://www.cardstats.co.uk/push_data_json.php",
 dataType:'json',
@@ -29,6 +31,9 @@ $('#cutposition').html(response.position );
 $('#cutcard').html(response.card );
 }
 });
+	
+	},1000);
+
 
 
 
