@@ -20,44 +20,12 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-
-
-
-
-
-
 function onDeviceReady() {
     // Now safe to use the PhoneGap API
 	var cutnumber = 0;
 	var cardcut = 'KK';
 	window.plugin.backgroundMode.enable();
-	
-	
-	
-	
-	
-	
-setTimeout(function(){
-	
-jQuery.ajax({
-url: "http://www.cardstats.co.uk/push_data_json.php",
-dataType:'json',
-success:function(response)
-{
-$('#cutposition').html(response.position );
-$('#cutcard').html(response.card );
-alert("Oi");
-}
-});
-	
-	},8000);
-	
-	
-	
-	
-	
-	
-	
+
 	
 $('#card').bind('DOMSubtreeModified', function() {
 	var cardcut = $('#card').html();
@@ -77,9 +45,6 @@ function badger() {
 	window.plugin.notification.badge.set(cutnumber);
 	}	
 
-
-
-
 $(window).load(function() {
     //dom not only ready, but everything is loaded
 	//alert("It's loaded!") 
@@ -95,18 +60,13 @@ setInterval(function(){
 {
 	$('#cutposition').html(response.position );
 	$('#cutcard').html(response.card );
-	
-
 }
 });
-	
 	},1000);
 
-
-	
-
-
 </script>
+
+
 <style type="text/css">
 body,td,th {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
