@@ -14,37 +14,16 @@
 
 $( document ).ready(function() {
 
-
-var cutnumber = 0;
-var currentvalue = 0;
-
-
 window.setInterval(badger, 10000);
 window.plugin.backgroundMode.enable();
-
 
 })
 
 function badger() {
-	alert("cutnumber is "+cutnumber);
-	alert("Current Value is "+currentvalue);
-	
 	
 	var cutnumber = $('#cutposition').html();
-	alert("cutnumber is "+cutnumber);
-	alert("Current Value is "+currentvalue);
-	
-	if (cutnumber != currentvalue) {
-		alert("Number changed");
-		window.plugin.notification.badge.set(cutnumber);
-		var currentvalue = cutnumber;
-		alert("Current Value is now "+currentvalue);
-	} else {
+	window.plugin.notification.badge.set('cutnumber');
 		
-		alert("NO Change");
-	}
-	
-	
 // or
 	//window.plugin.notification.badge.set('3');
 }
