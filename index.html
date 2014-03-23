@@ -22,11 +22,14 @@ window.plugin.backgroundMode.enable();
 
 function badger() {
 	var cutnumber = $('#cutposition').html();
+	alert("cutnumber is "+cutnumber);
+	alert("Current Value is "+currentvalue);
 	
 	if (cutnumber != currentvalue) {
-		alert("Change");
+		alert("Number changed Change");
 		window.plugin.notification.badge.set(cutnumber);
 		var currentvalue = cutnumber;
+		alert("Current Value is now "+currentvalue);
 	} else {
 		
 		alert("NO Change");
