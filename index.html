@@ -29,19 +29,23 @@ $('#card').bind('DOMSubtreeModified', function() {
     message: cardcut,
 });
 });
-
-
-function badger() {
-	alert("Badger run");
-	var cutnumber = $('#cutposition').html();
-	window.plugin.notification.badge.set(cutnumber);
-	
-}	
 	
 }
 
+function badger() {
+	//alert("Badger run");
+	var cutnumber = $('#cutposition').html();
+	window.plugin.notification.badge.set(cutnumber);
+	}	
 
 
+
+
+$(window).load(function() {
+    //dom not only ready, but everything is loaded
+	//alert("It's loaded!") 
+	badger();
+});
 
 </script>
 <style type="text/css">
@@ -106,8 +110,8 @@ var ds1 = new Spry.Data.XMLDataSet("http://www.cardstats.co.uk/push_data.php?xml
 <link href="http://www.cardstats.co.uk/ios_icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
 </head>
 
-<body onload="doSort(), badger(); {window.scrollTo(0, 1)}, 100);">
-<div id="background_image" onClick="badger()"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
+<body onload="{window.scrollTo(0, 1)}, 100);">
+<div id="background_image" onClick="badger();"><img class="imagesize" src="background.png" width="640" height="1136" /></div>
 <div spry:region="ds1" id="position">
 Number <span id="cutposition">{position}</span></div>
 
