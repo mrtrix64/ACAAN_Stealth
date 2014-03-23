@@ -58,6 +58,7 @@ Any Card At Any Number (ACAAN) is the holy grail of card magic.
 	<gap:plugin name="de.appplant.cordova.plugin.badge" />
 	<gap:plugin name="de.appplant.cordova.plugin.background-mode" />
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
+	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	<!--<gap:plugin name="com.cleartag.plugins.enablebackgroundlocation" />-->
 	<!--<preference name="target-device" value="handset" />-->
 	<!--<preference name="auto-hide-splash-screen" value="false" />-->

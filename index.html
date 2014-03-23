@@ -18,6 +18,15 @@ $('#card').bind('DOMSubtreeModified', function() {
     //alert("Changed");
 	var cutnumber = $('#cutposition').html();
 	window.plugin.notification.badge.set(cutnumber);
+	
+	
+	window.plugin.notification.local.add({
+    //id:      1,
+    title:   'Result',
+    message: cutnumber,
+    //repeat:  'weekly',
+    //date:    _60_seconds_from_now
+});
 });	
 	
 	
