@@ -1,5 +1,5 @@
 // JavaScript Document
-// Wait for device API libraries to load
+// Wait for device API libraries to load (24/03/2014)
     //
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
