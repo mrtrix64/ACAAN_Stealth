@@ -1,3 +1,4 @@
+// JavaScript Document
 // Wait for device API libraries to load
     //
     function onLoad() {
@@ -8,7 +9,9 @@
     //
     function onDeviceReady() {
         // Now safe to use device APIs
-	setInterval(function(){
+	var timerCount = 0;
+	window.plugins.BackgroundJS.LockBackgroundTime(function(){}, function(msg){console.log(msg);});
+	setInterval(function() {
 	jQuery.ajax({
 	url: "http://www.cardstats.co.uk/push_data_json.php",
 	dataType:'json',
@@ -41,10 +44,16 @@ else
   }
 }
 });
-	
 	},1000);
-window.plugin.backgroundMode.enable();	
     }
+
+
+//window.plugin.backgroundMode.enable();	
+
+
+
+
+
 
 
 /*document.addEventListener("deviceready", onDeviceReady, false);
